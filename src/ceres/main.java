@@ -27,6 +27,9 @@ class main {
 		//setar tabela de saida
 		campo.setOutputTable("USUARIOS");
 		
+		//teste tosco
+		campo.equals(profile);
+		
 		profile.addFields(campo);
 		
 		
