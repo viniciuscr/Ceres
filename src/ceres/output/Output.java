@@ -8,7 +8,14 @@ public class Output {
 
     private OutputBehavior outputBehavior;
     private String arquivo;
-
+    private Profile profile;
+    private DataInput data;
+    
+    prublic Output(Profile profile, data){
+    	this.profile = profile;
+    	this.data = data;
+    }
+    
     public void setArquivo(String arquivo) {
         this.arquivo = arquivo;
     }
@@ -17,8 +24,12 @@ public class Output {
         this.outputBehavior = outputBehavior;
     }
 
-    public void insert(){
-        this.outputBehavior.insert();
+    public void genererateOutput(){
+    	while (linha = data.read(); != EOF){
+    		
+    		this.outputBehavior.generateLine(linha);
+    		this.arquivo recebe linha;
+    	}
     }
 
     
