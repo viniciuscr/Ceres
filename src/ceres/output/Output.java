@@ -7,7 +7,7 @@ import ceres.output.otbehavior.OutputBehavior;
 public class Output {
 
     private OutputBehavior outputBehavior;
-    private String arquivo;
+    private FileOutputStream arquivo;
     private Profile profile;
     private DataInput data;
     
@@ -17,7 +17,7 @@ public class Output {
     }
     
     public void setArquivo(String arquivo) {
-        this.arquivo = arquivo;
+        this.arquivo = new FileOutputStream(arquivo);
     }
 
     public void setOutputBehavior(OutputBehavior outputBehavior) {
@@ -25,7 +25,7 @@ public class Output {
     }
 
     public void genererateOutput(){
-    	while (linha = data.read(); != EOF){
+    	while (linha = data.read() != EOF){
     		
     		this.outputBehavior.generateLine(linha);
     		this.arquivo recebe linha;
