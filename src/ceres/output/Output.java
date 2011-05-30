@@ -23,14 +23,19 @@ public class Output {
     public void setOutputBehavior(OutputBehavior outputBehavior) {
         this.outputBehavior = outputBehavior;
     }
-
+    
+    /*
+     * Gera arquivo de saída de acordo com as configurações préviamente definidas
+     */
     public void genererateOutput(){
-    	while (linha = data.read() != EOF){
+    	while (linha = data.read() != null){
     		
     		this.outputBehavior.generateLine(linha);
     		this.arquivo recebe linha;
     	}
+    	this.arquivo.close();
     }
+    
 
     
 

@@ -12,8 +12,8 @@ public class DataInput {
         public DataInput(String caminho) {
 		this.arquivo = new File(caminho);
 	}
-        public void read(){
-		this.readBehaivor.read(arquivo);
+        public String read(){
+        	return this.readBehaivor.read();
 	}
 
         public File getArquivo() {
@@ -30,6 +30,7 @@ public class DataInput {
 
         public void setReadBehaivor(ReadDataBehavior readBehaivor) {
             this.readBehaivor = readBehaivor;
+            this.readBehaivor.setFile(arquivo);
         }
         
 }

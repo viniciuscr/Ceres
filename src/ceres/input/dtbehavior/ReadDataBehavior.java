@@ -5,6 +5,6 @@ import java.io.File;
 
 
 public interface ReadDataBehavior {
-    public void read(File arquivo);
-
+    public String read();
+    public void setFile(File arquivo);
 }
