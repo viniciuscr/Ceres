@@ -38,10 +38,6 @@ public class ReadTxt implements ReadDataBehavior {
 		this.type = 2;
 	}
 	
-	public void setFile(File arquivo){
-		this.file = arquivo;
-	}
-	
 	public String[] read(File arquivo) {
 		try {
 			this.fileReader = new FileReader(arquivo);
@@ -52,18 +48,16 @@ public class ReadTxt implements ReadDataBehavior {
 		this.bufferReader = new BufferedReader(fileReader);
 
 		String line;
-		if(line = this.bufferReader.readLine() != null){
-			try {
-			
+		try {
+			if((line = this.bufferReader.readLine()) != null){
 				if (this.type == 1)
 					 return readWithTab(line);
 				else
 					return readWithLimits(line);
-			
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
 			}
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 		
 		return null;
