@@ -2,9 +2,7 @@
 package ceres.output.otbehavior;
 
 import java.io.Writer;
-
 import ceres.control.Profile;
-
 
 public class OutputSql implements OutputBehavior{
 
@@ -13,5 +11,4 @@ public class OutputSql implements OutputBehavior{
 		// TODO Auto-generated method stub
 		return 0;
 	}
-
 }
