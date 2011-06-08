@@ -14,7 +14,7 @@ TODO
  
 Teste de código fonte no readme
 -------------------------------
-
+{
 package ceres.output.otbehavior;
 
 import java.io.Writer;
@@ -27,4 +27,5 @@ public class OutputSql implements OutputBehavior{
 		// TODO Auto-generated method stub
 		return 0;
 	}
+}
 }
