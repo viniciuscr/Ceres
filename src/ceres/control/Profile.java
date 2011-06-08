@@ -1,7 +1,6 @@
 package ceres.control;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 
 public class Profile {
 
@@ -10,7 +9,6 @@ public class Profile {
 
 	// lista de campos das tabelas
 	private ArrayList<Field> fields;
-	private HashMap<String, String> connection = new HashMap<String, String>();
 
 	// Aplicação do padrão Singleton
 	private Profile() {}
@@ -22,7 +20,11 @@ public class Profile {
 		}
 		return uniqueInstance;
 	}
-
+	/**
+	 * Retorna um a lista de campos armazenados no profile
+	 * 
+	 * @return ArrayList<Field>
+	 */
 	public ArrayList<Field> getFields() {
 		return fields;
 	}
@@ -30,29 +32,9 @@ public class Profile {
 	/**
 	 * Adiciona um campo ao profile
 	 * 
-	 * @param field
-	 *            Field
+	 * @param Field
 	 */
-	public void addFields(Field field) {
+	public void addField(Field field) {
 		this.fields.add(field);
-	}
-	
-	/***
-	 * Seta o tipo de arquivo de entrada para Conexão direta com Banco
-	 * 
-	 * @param host
-	 *            String Endereço IP para conexão
-	 * @param user
-	 *            String Nome de usuário do banco
-	 * @param pass
-	 *            String Senha do usuário
-	 * @return Boolean <b>true</b> caso consiga conectar ou <b>false</b> caso
-	 *         ocorra algum erro
-	 */
-	public void setTypeInputDB(String host, String user, String pass) {
-		this.connection.put("host", host);
-		this.connection.put("user", user);
-		this.connection.put("pass", pass);
-
 	}
 }

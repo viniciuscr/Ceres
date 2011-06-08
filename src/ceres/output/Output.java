@@ -1,7 +1,6 @@
 
 package ceres.output;
 
-import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.Writer;
@@ -43,7 +42,7 @@ public class Output {
     	String[] linha;
 		while ((linha = data.read() ) != null){
     		
-			this.outputBehavior.save(linha,this.arquivo,profile);
+			this.outputBehavior.save(linha,this.arquivo, profile);
     		
     	}
     	

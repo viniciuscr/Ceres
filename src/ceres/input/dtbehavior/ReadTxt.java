@@ -2,14 +2,13 @@
 package ceres.input.dtbehavior;
 
 import java.io.File;
-
-
-
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+
+import ceres.control.Field;
 
 public class ReadTxt implements ReadDataBehavior {
 
@@ -49,7 +48,8 @@ public class ReadTxt implements ReadDataBehavior {
 
 		String line;
 		try {
-			if((line = this.bufferReader.readLine()) != null){
+			if(this.bufferReader.ready()){
+				line = this.bufferReader.readLine();
 				if (this.type == 1)
 					 return readWithTab(line);
 				else
@@ -64,7 +64,13 @@ public class ReadTxt implements ReadDataBehavior {
 	}
 
 	private String[] readWithLimits(String line) {
-		return line.split(null);
+		String[] linha = null;
+		for(int i =0; i <= limits.size(); i++){
+
+			linha[i] = line.substring(limits.get(i)[0], limits.get(i)[1]);
+		
+		}
+		return linha;
 
 	}
 

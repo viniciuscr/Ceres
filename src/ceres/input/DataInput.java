@@ -1,6 +1,5 @@
 
 package ceres.input;
-
 import ceres.input.dtbehavior.ReadDataBehavior;
 import java.io.File;
 
