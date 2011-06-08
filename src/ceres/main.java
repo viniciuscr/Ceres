@@ -19,11 +19,10 @@ class main {
 		dados.setReadBehaivor(new ReadTxt(";"));
 		
 		//criar profile 
-		Profile profile = new Profile();
+		Profile profile = Profile.getInstance();
 		//criar um campo
 		Field campo = new Field("ct_cidade", "CIDADE");
-		//setar o tipo
-		campo.setType("varchar(150)");
+
 		//setar tabela de saida
 		campo.setOutputTable("USUARIOS");
 		

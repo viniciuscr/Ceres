@@ -11,8 +11,6 @@ public class Field {
 	private String inputTable;
 	//novo nome da tabela que ficará na saída
 	private String outputTable;
-	//tipo do campo
-	private String type;
 	//valor do campo no arquivo de entrada
 	private String value;
 	//valor do campo após receber formatação
@@ -80,23 +78,6 @@ public class Field {
 	 */
 	public void setOutputName(String outputName) {
 		this.outputName = outputName;
-	}
-
-	public String getType() {
-		return type;
-	}
-	/**
-	 * Seta qual será o tipo do campo na saída
-	 * <p>
-	 * <b>Example</b>
-	 * <ul>
-	 * <li>"varchar(50)"</li>
-	 * <li>"Integer"</li>
-	 * </ul>
-	 * @param type String
-	 */
-	public void setType(String type) {
-		this.type = type;
 	}
 	/**
 	 * Retorna o valor original do campo
