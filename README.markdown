@@ -10,22 +10,4 @@ TODO
 - gerenciar acessos a banco de dados de forma a permitir conexão com diferentes bancos e de forma inteligente.
 - criar classe de normalização de arquivos para servirem de entrada no Ceres * 
 
-* Prioridades
- 
-Teste de código fonte no readme
--------------------------------
-{
-package ceres.output.otbehavior;
-
-import java.io.Writer;
-import ceres.control.Profile;
-
-public class OutputSql implements OutputBehavior{
-
-	@Override
-	public int save(String[] linha, Writer arquivo, Profile profile) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-}
-}
+ Prioridades *
