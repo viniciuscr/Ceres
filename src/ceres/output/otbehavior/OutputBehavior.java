@@ -7,5 +7,5 @@ import ceres.control.Profile;
 
 
 public interface OutputBehavior {
-        public int save(String[] linha, Writer arquivo, Profile profile);
+        public String generate(String[] linha, Profile profile);
 }

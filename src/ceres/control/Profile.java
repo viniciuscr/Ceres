@@ -37,4 +37,12 @@ public class Profile {
 	public void addField(Field field) {
 		this.fields.add(field);
 	}
+	/**
+	 * Salva o Profile em um arquivo XML
+	 * 
+	 * @param Field
+	 */
+	public void saveProfile() {
+		
+	}
 }

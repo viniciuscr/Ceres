@@ -5,6 +5,8 @@ import ceres.control.ftbehavior.FormatBehavior;
 public class Field {
 	//nome do campo na estrutura
 	private String inputName;
+	//nome do campo na estrutura
+	private Integer inputPosition;
 	//novo nome que ficará na saída
 	private String outputName;
 	//nome da tabela do campo da estrutura
@@ -21,6 +23,12 @@ public class Field {
 	public Field(String inputName, String outputName) {
 		this.inputName = inputName;
 		this.outputName = outputName;
+		this.inputPosition = null;
+	}
+	public Field(int inputPosition, String outputName) {
+		this.outputName = outputName;
+		this.inputPosition = inputPosition;
+		this.inputName = null;
 	}
 	/**
 	 *  Retorna o nome, posição ou limites do campo de entrada
@@ -28,13 +36,15 @@ public class Field {
 	 * <b>Example:</b>
 	 * <ul>
 	 * <li>"NomeDoCampo" =>   caso seja leitura de um XML</li>
-	 * <li>"0;12"		 =>   caso seja leitura de um txt sem separador</li>
-	 * <li> "5"		     =>   caso seja a leitura de um txt com separador</li>
+	 * <li> "5"		     =>   caso seja a leitura de um txt</li>
 	 * </ul>
-	 * @return String
+	 * @return String or Int
 	 */
-	public String getInputName() {
-		return inputName;
+	public Object getInputName() {
+		if(this.inputName == null)
+			return inputPosition;
+		else
+			return inputName;
 	}
 	/**
 	 * Seta o nome, posição ou limites do campo de entrada
@@ -42,8 +52,7 @@ public class Field {
 	 * <b>Example:</b>
 	 * <ul>
 	 * <li>"NomeDoCampo" =>   caso seja leitura de um XML</li>
-	 * <li>"0;12"		 =>   caso seja leitura de um txt sem separador</li>
-	 * <li> "5"		     =>   caso seja a leitura de um txt com separador</li>
+	 * <li> "5"		     =>   caso seja a leitura de um txt</li>
 	 * </ul>
 	 * @param inputName String
 	 * 

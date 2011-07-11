@@ -7,8 +7,8 @@ import ceres.control.Profile;
 public class OutputSql implements OutputBehavior{
 
 	@Override
-	public int save(String[] linha, Writer arquivo, Profile profile) {
+	public String generate(String[] linha,  Profile profile) {
 		// TODO Auto-generated method stub
-		return 0;
+		return null;
 	}
 }

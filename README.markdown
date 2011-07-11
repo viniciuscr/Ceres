@@ -1,6 +1,6 @@
-----
-TODO
 
+TODO
+----
 - leitura de dados a partir de de XML
 - exportação do perfil para XML ou arquivo binário.
 - gerar saída de dados em XML

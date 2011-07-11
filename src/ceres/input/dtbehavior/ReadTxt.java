@@ -22,7 +22,6 @@ public class ReadTxt implements ReadDataBehavior {
 	private int type;
 	// array com os limiteadores
 	// array(inicio, fim)
-	@SuppressWarnings("unused")
 	private ArrayList<int[]> limits;
 
 	// contrutor para o caso do arquivo trabalhar com separadores
@@ -31,7 +30,7 @@ public class ReadTxt implements ReadDataBehavior {
 		this.type = 1;
 	}
 
-	// contrutor para o caso do arquivo trabalhar com limites
+	// construtor para o caso do arquivo trabalhar com limites
 	public ReadTxt(ArrayList<int[]> limits) {
 		this.limits = limits;
 		this.type = 2;
