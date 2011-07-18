@@ -63,10 +63,11 @@ public class ReadTxt implements ReadDataBehavior {
 	}
 
 	private String[] readWithLimits(String line) {
-		String[] linha = null;
-		for(int i =0; i <= limits.size(); i++){
-
-			linha[i] = line.substring(limits.get(i)[0], limits.get(i)[1]);
+		String[] linha = new String[limits.size()];
+		for(int i =0; i <= limits.size() -1; i++){
+			int[] limit = limits.get(i);
+			
+			linha[i] = line.substring(limit[0], limit[1]);
 		
 		}
 		return linha;

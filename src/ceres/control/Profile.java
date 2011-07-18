@@ -11,7 +11,9 @@ public class Profile {
 	private ArrayList<Field> fields;
 
 	// Aplicação do padrão Singleton
-	private Profile() {}
+	private Profile() {
+		this.fields = new ArrayList<Field>();
+	}
 
 	// Aplicação do padrão Singleton
 	public static Profile getInstance() {

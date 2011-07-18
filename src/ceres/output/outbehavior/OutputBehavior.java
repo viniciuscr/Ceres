@@ -1,7 +1,5 @@
 
-package ceres.output.otbehavior;
-
-import java.io.Writer;
+package ceres.output.outbehavior;
 
 import ceres.control.Profile;
 

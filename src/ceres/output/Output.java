@@ -8,7 +8,7 @@ import java.io.Writer;
 
 import ceres.control.Profile;
 import ceres.input.DataInput;
-import ceres.output.otbehavior.OutputBehavior;
+import ceres.output.outbehavior.OutputBehavior;
 
 
 public class Output {

@@ -1,7 +1,6 @@
 
 package ceres;
 
-import java.io.DataOutput;
 import java.util.ArrayList;
 
 import ceres.input.DataInput;
@@ -18,37 +17,44 @@ class main {
 	public static void main(String[] args) {
 		
 		ArrayList<int[]> limits = new ArrayList<int[]>();
-		int [] limit = null;
+		int [] limit = new int[2];
 		
 		//adicionar  limite
 		limit[0] = 0;
 		limit[1] = 7;
 		limits.add(limit);
 		//adicionar  limite
+		limit = new int[2];
 		limit[0] = 8;
 		limit[1] = 19;
 		limits.add(limit);
 		//adicionar  limite
+		limit = new int[2];
 		limit[0] = 20;
 		limit[1] = 29;
 		limits.add(limit);
 		//adicionar  limite
+		limit = new int[2];
 		limit[0] = 30;
 		limit[1] = 40;
 		limits.add(limit);
 		//adicionar  limite
+		limit = new int[2];
 		limit[0] = 41;
 		limit[1] = 51;
 		limits.add(limit);
 		//adicionar  limite
+		limit = new int[2];
 		limit[0] = 52;
 		limit[1] = 64;
 		limits.add(limit);
 		//adicionar  limite
+		limit = new int[2];
 		limit[0] = 65;
 		limit[1] = 73;
 		limits.add(limit);
 		//adicionar  limite
+		limit = new int[2];
 		limit[0] = 74;
 		limit[1] = 79;
 		limits.add(limit);
