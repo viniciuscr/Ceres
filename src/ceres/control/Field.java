@@ -102,6 +102,7 @@ public class Field {
 	 */
 	public void setValue(String value) {
 		this.value = value;
+		this.formatedValue = value;
 	}
 	/**
 	 *  Retorna o valor formatado de acordo
@@ -109,6 +110,8 @@ public class Field {
 	 *  @return String
 	 */
 	public String getFormatedValue() {
+		if(this.formatBehaivor != null)
+			this.formatBehaivor.format(this);
 		return formatedValue;
 	}
 	/**
@@ -133,6 +136,9 @@ public class Field {
 	 */
 	public void setOutputTable(String outputTable) {
 		this.outputTable = outputTable;
+	}
+	public String getOutputTable() {
+		return this.outputTable;
 	}
 
 }

@@ -6,21 +6,21 @@ import java.io.File;
 
 public class DataInput {
 	private ReadDataBehavior readBehaivor;
-	private File arquivo;
+	private File file;
 
         public DataInput(String caminho) {
-		this.arquivo = new File(caminho);
+		this.file = new File(caminho);
 	}
         public String[] read(){
-        	return this.readBehaivor.read(arquivo);
+        	return this.readBehaivor.read(file);
 	}
 
-        public File getArquivo() {
-            return arquivo;
+        public File getFile() {
+            return file;
         }
 
-        public void setArquivo(File arquivo) {
-            this.arquivo = arquivo;
+        public void setFile(File file) {
+            this.file = file;
         }
 
         public ReadDataBehavior getReadBehaivor() {

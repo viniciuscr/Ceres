@@ -8,8 +8,6 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 
-import ceres.control.Field;
-
 public class ReadTxt implements ReadDataBehavior {
 
 	private FileReader fileReader;

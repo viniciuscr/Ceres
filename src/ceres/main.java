@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import ceres.input.DataInput;
 import ceres.input.dtbehavior.ReadTxt;
 import ceres.output.Output;
+import ceres.output.outbehavior.OutputSql;
 import ceres.control.Field;
 import ceres.control.Profile;
 
@@ -69,15 +70,18 @@ class main {
 		//criar profile 
 		Profile profile = Profile.getInstance();
 		//criar um campo
-		Field campo = new Field(1, "temperatura");
-
-		//setar tabela de saida
-		campo.setOutputTable("USUARIOS");
-	
 		
-		profile.addField(campo);
-		
+		for(int i=0; i<8;i++){
+			Field campo = new Field(i, "campo"+i);
+			//setar tabela de saida
+			if(i%2 ==0)
+				campo.setOutputTable("TEMPERATURA");
+			else
+				campo.setOutputTable("OUTRATEMPERATURA");
+			profile.addField(campo);
+		}
 		Output saida = new Output(profile, dados);
+		saida.setOutputBehavior(new OutputSql());
 		
 		String exemplo = saida.getASample();
 		System.out.println(exemplo);

@@ -14,7 +14,7 @@ import ceres.output.outbehavior.OutputBehavior;
 public class Output {
 
     private OutputBehavior outputBehavior;
-    private Writer arquivo;
+    private Writer file;
     private Profile profile;
     private DataInput data;
     
@@ -23,16 +23,16 @@ public class Output {
     	this.data = data;
     }
     
-    public void setArquivo(String arquivo) {
+    public void setFile(String file) {
     	try {
-			this.arquivo = new FileWriter(arquivo);
+			this.file = new FileWriter(file);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
     }
     private boolean saveLine(String line){
-    	BufferedWriter writer = new BufferedWriter(this.arquivo);
+    	BufferedWriter writer = new BufferedWriter(this.file);
     	try {
 			writer.write(line);
 		} catch (IOException e) {
