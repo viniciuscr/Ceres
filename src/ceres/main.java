@@ -82,9 +82,10 @@ class main {
 		}
 		Output saida = new Output(profile, dados);
 		saida.setOutputBehavior(new OutputSql());
-		
-		String exemplo = saida.getASample();
-		System.out.println(exemplo);
+		saida.setFile("/home/vinicius/dadosaidas.dat");
+		//String exemplo = saida.getASample();
+		//System.out.println(exemplo);
 
+		saida.genererateOutput();
 	}
 }

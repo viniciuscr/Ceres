@@ -10,8 +10,8 @@ import java.util.ArrayList;
 
 public class ReadTxt implements ReadDataBehavior {
 
-	private FileReader fileReader;
-	private BufferedReader bufferReader;
+	private FileReader fileReader = null;
+	private BufferedReader bufferReader = null;
 	// seta o separador
 	private String tab;
 	// seta o tipo de leitura
@@ -36,22 +36,25 @@ public class ReadTxt implements ReadDataBehavior {
 	
 	public String[] read(File arquivo) {
 		try {
-			this.fileReader = new FileReader(arquivo);
+			if(this.fileReader==null)
+				this.fileReader = new FileReader(arquivo);
+			if(this.bufferReader == null)
+				this.bufferReader = new BufferedReader(fileReader);
+
 		} catch (FileNotFoundException e) {
 
 			e.printStackTrace();
 		}
-		this.bufferReader = new BufferedReader(fileReader);
-
-		String line;
+				String line;
 		try {
-			if(this.bufferReader.ready()){
-				line = this.bufferReader.readLine();
+			
+				if((line = this.bufferReader.readLine() ) != null)
+				
 				if (this.type == 1)
 					 return readWithTab(line);
 				else
 					return readWithLimits(line);
-			}
+			
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

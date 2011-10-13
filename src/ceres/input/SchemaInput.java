@@ -1,33 +1,12 @@
 package ceres.input;
 
-import ceres.input.rsbehavior.ReadSchemaBehavior;
 import java.io.File;
 
 public class SchemaInput {
-    //interface de leitura
-
-    private ReadSchemaBehavior readBehaivor;
-    //arquivo a ser lido
-    private File arquivo;
 
     public SchemaInput() {
     }
 
-    public SchemaInput(String caminho) {
-        this.arquivo = new File(caminho);
-    }
-
-    public void read() {
-        this.readBehaivor.read(arquivo);
-    }
-
-    public ReadSchemaBehavior getReadBehaivor() {
-        return readBehaivor;
-    }
-
-    public void setReadBehaivor(ReadSchemaBehavior readBehaivor) {
-        this.readBehaivor = readBehaivor;
-    }
 
     /**
      * 

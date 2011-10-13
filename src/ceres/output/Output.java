@@ -35,6 +35,8 @@ public class Output {
     	BufferedWriter writer = new BufferedWriter(this.file);
     	try {
 			writer.write(line);
+			writer.write(System.getProperty("line.separator"));
+			writer.flush();
 		} catch (IOException e) {
 			System.out.println("Erro ao salvar a linha");
 			e.printStackTrace();
